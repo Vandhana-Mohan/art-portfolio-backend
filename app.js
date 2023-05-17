@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+// const cors = require("cors");
 // const groceriesControllers = require("./controllers/groceriesControllers.js");
 // const reviewsController = require("./controllers/reviewsController.js");
 //CONFIG
