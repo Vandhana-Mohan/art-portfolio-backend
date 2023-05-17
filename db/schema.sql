@@ -16,6 +16,15 @@ CREATE TABLE userData (
     tik_tok TEXT
 );
 
+CREATE TABLE collections (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES userData (id),
+    title VARCHAR(255),
+    description TEXT,
+    theme VARCHAR(255) NOT NULL,
+    collection_name TEXT NOT NULL
+);
+
 CREATE TABLE artworks (
     id SERIAL PRIMARY KEY,
     collection_id INTEGER REFERENCES collections (id),
@@ -23,18 +32,8 @@ CREATE TABLE artworks (
     price DECIMAL(10,2) NOT NULL CHECK (price >= 0),
     is_for_sale BOOLEAN DEFAULT false,
     description TEXT,
-    image_url VARCHAR(255),
+    image_url VARCHAR(255) NOT NULL,
     medium VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-CREATE TABLE collections (
-    id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES userData (id),
-    title VARCHAR(255),
-    description TEXT,
-    theme VARCHAR(255),
-    collection_name TEXT
-);
-
