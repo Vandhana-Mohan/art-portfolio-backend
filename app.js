@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 
 // MIDDLEWARE
-app.use(cors());
+// app.use(cors());
 app.use(express.json()); //parses incoming json request
 
 // ROUTES
