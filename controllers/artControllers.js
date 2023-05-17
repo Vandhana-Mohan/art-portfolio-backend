@@ -5,29 +5,29 @@ const art = express.Router();
 // const reviewsController = require("./reviewsController.js")
 // const validateURL = require("../validations/validateUrl.js");
 
-// const {
-//   getAllGroceries,
+const {
+  getAllGroceries,
 //   getGrocery,
 //   createGrocery,
 //   updateGrocery,
 //   deleteGrocery,
-// } = require("../queries/groceries.js");
+} = require("../queries/artQuery.js");
 
 // groceries.use("/:groceryId/reviews", reviewsController)
 
 
 
 
-// // INDEX - show all
+// INDEX - show all
 
-// groceries.get("/", async (req, res) => {
-//   const allGroceries = await getAllGroceries();
-//   if (allGroceries[0]) {
-//     res.status(200).json(allGroceries);
-//   } else {
-//     res.status(500).json({ error: "Server Error" });
-//   }
-// });
+groceries.get("/", async (req, res) => {
+  const allGroceries = await getAllGroceries();
+  if (allGroceries[0]) {
+    res.status(200).json(allGroceries);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
 
 // //Show one item by id
 // groceries.get("/:id", async (req, res) => {
@@ -77,4 +77,4 @@ const art = express.Router();
 //   }
 // });
 
-module.exports = groceries;
+module.exports = art;
