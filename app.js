@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const artControllers = require("./controllers/artControllers.js")
-// const reviewsController = require("./controllers/reviewsController.js");
+const artControllers = require("./controllers/artControllers.js");
 
 //CONFIG
 const app = express();
@@ -16,8 +15,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/art", artControllers);
-
-// app.use("/reviews", reviewsController);
 
 app.get("*", (req, res) => {
   res.status(404).send("Page not found");

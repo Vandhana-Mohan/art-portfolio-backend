@@ -34,6 +34,4 @@ CREATE TABLE artworks (
     description TEXT,
     image_url VARCHAR(255) NOT NULL,
     medium VARCHAR(255),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
