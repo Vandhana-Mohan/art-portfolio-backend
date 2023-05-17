@@ -1,7 +1,8 @@
 const express = require("express");
 // const cors = require("cors");
-// const groceriesControllers = require("./controllers/groceriesControllers.js");
+// const artControllers = require("./controllers/artControllers.js")
 // const reviewsController = require("./controllers/reviewsController.js");
+
 //CONFIG
 const app = express();
 
@@ -13,8 +14,11 @@ app.use(express.json()); //parses incoming json request
 app.get("/", (req, res) => {
   res.send("Welcome to Sanaaaa");
 });
-// app.use("/groceries", groceriesControllers);
+
+// app.use("/groceries", artControllers);
+
 // app.use("/reviews", reviewsController);
+
 app.get("*", (req, res) => {
   res.status(404).send("Page not found");
 });
