@@ -2,20 +2,20 @@
 
 ARTS Portfolio Backend - This backend application is designed to handle requests for aspiring artists.
 
-## [Click my Trello Board](https://trello.com/b/Llxn3QTV/art-portfolio-sanaa)
+#### [Trello Board](https://trello.com/b/Llxn3QTV/art-portfolio-sanaa)
 
-## [Click my Deployed Backend URL](https://art-portfolio-0jpa.onrender.com)
+#### [Deployed Backend URL](https://art-portfolio-0jpa.onrender.com)
 
-## [Click my Deployed Frontend URL](https://...)
+#### [Deployed Frontend URL](https://...)
 
 ---
 
 To learn more about our me, please refer to the GitHub and LinkedIn links provided in the table below.
 
-| Dev Team | Role | GitHub | LinkedIn
+| Dev Team |              | GitHub | LinkedIn |
 | :--------------: | :-------: | :-------: | :-------: |
 
-| **Vandhana Mohan**  | Front Lead & Testing Lead | [GitHub](https://github.com/Vandhana-Mohan) | [LinkedIn](https://www.linkedin.com/in/vandhanamohan/)
+| **Vandhana Mohan**  |       [GitHub](https://github.com/Vandhana-Mohan) | [LinkedIn](https://www.linkedin.com/in/|vandhanamohan/)
 
 ---
 
