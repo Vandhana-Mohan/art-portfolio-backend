@@ -15,15 +15,15 @@
     "url": "git+https://github.com/Vandhana-Mohan/art-portfolio-backend.git"
   },
   "keywords": [
-    "[creative",
+    "creative",
     "coding",
     "express",
     "postgres",
     "art",
     "artist",
-    "portfolio]"
+    "portfolio"
   ],
-  "author": "\"Vandhana Mohan\"",
+  "author": "Vandhana Mohan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Vandhana-Mohan/art-portfolio-backend/issues"
@@ -33,6 +33,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "joi": "^17.9.2",
+    "pg-promise": "^11.4.3",
     "promise": "^8.3.0"
   }
 }
