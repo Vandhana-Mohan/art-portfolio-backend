@@ -11,8 +11,17 @@ const getAllUserData = async () => {
 
 const getAllArt = async () => {
   try {
-    const allArt = await db.any("SELECT * FROM artworks ORDER BY id");
+    const allArt = await db.any("SELECT * FROM artworks");
     return allArt;
+  } catch (error) {
+    throw error;
+  }
+};
+
+const getAllCollections = async () => {
+  try {
+    const allCollections = await db.any("SELECT * FROM collections");
+    return allCollections;
   } catch (error) {
     throw error;
   }
@@ -89,6 +98,7 @@ const getAllArt = async () => {
 module.exports = {
   getAllUserData,
   getAllArt,
+  getAllCollections,
   //   getGrocery,
   //   createGrocery,
   //   updateGrocery,

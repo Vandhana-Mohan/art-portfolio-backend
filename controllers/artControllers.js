@@ -8,6 +8,7 @@ const art = express.Router();
 const {
   getAllUserData,
   getAllArt,
+  getAllCollections,
   //   getArt,
   //   createArt,
   //   updateArt,
@@ -33,6 +34,17 @@ art.get("/image", async (req, res) => {
   const allArt = await getAllArt();
   if (allArt[0]) {
     res.status(200).json(allArt);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// INDEX - show all collections
+
+art.get("/collection", async (req, res) => {
+  const allCollection = await getAllCollections();
+  if (allCollection[0]) {
+    res.status(200).json(allCollection);
   } else {
     res.status(500).json({ error: "Server Error" });
   }
