@@ -1,15 +1,22 @@
 const db = require("../db/dbConfig");
 
-const getAllArt = async () => {
+const getAllUserData = async () => {
   try {
-    const allArt = await db.any("SELECT * FROM userData ORDER BY id");
-    return allArt;
+    const allUsers = await db.any("SELECT * FROM userData ORDER BY id");
+    return allUsers;
   } catch (error) {
     throw error;
   }
 };
 
-
+const getAllArt = async () => {
+  try {
+    const allArt = await db.any("SELECT * FROM artworks ORDER BY id");
+    return allArt;
+  } catch (error) {
+    throw error;
+  }
+};
 
 // const getGrocery = async (id) => {
 //   try {
@@ -80,6 +87,7 @@ const getAllArt = async () => {
 // };
 
 module.exports = {
+  getAllUserData,
   getAllArt,
   //   getGrocery,
   //   createGrocery,

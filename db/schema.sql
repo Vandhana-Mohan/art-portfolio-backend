@@ -33,5 +33,5 @@ CREATE TABLE artworks (
     is_for_sale BOOLEAN DEFAULT false,
     description TEXT,
     image_url VARCHAR(255) NOT NULL,
-    medium VARCHAR(255),
+    medium VARCHAR(255)
 );

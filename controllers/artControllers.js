@@ -6,19 +6,30 @@ const art = express.Router();
 // const validateURL = require("../validations/validateUrl.js");
 
 const {
+  getAllUserData,
   getAllArt,
-//   getArt,
-//   createArt,
-//   updateArt,
-//   deleteArt,
+  //   getArt,
+  //   createArt,
+  //   updateArt,
+  //   deleteArt,
 } = require("../queries/artQuery.js");
 
 // groceries.use("/:groceryId/reviews", reviewsController)
 
+// INDEX - show all user data
 
-// INDEX - show all
+art.get("/user", async (req, res) => {
+  const allUser = await getAllUserData();
+  if (allUser[0]) {
+    res.status(200).json(allUser);
+  } else {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
 
-art.get("/", async (req, res) => {
+// INDEX - show all images
+
+art.get("/image", async (req, res) => {
   const allArt = await getAllArt();
   if (allArt[0]) {
     res.status(200).json(allArt);

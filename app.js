@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to Sanaaaa");
 });
 
-app.use("/art", artControllers);
+app.use("/artworks", artControllers);
 
 app.get("*", (req, res) => {
   res.status(404).send("Page not found");
