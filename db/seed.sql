@@ -4,8 +4,21 @@
 INSERT INTO userData (name, about_artist, profession, location, instagram, facebook, tik_tok)
 VALUES ('Ana', 'I like to draw, dance, gardening', 'artist', 'India', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/');
 
-INSERT INTO collections (user_id, title, description, theme, collection_name) 
-VALUES (1, 'scribble', 'rough draw', 'nature', 'nature');
+INSERT INTO collections (user_id, title, description, theme, collection_name, image_url) VALUES 
+(1, 'scribble', 'rough draw', 'nature', 'nature',''),
+(1, 'apple', 'rwrweew', 'apple', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'pen', 'ewrwer', 'pen', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'pencil', 'dddfsdfsd', 'pencil', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'fruit', 'sdadada', 'fruit', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'veg', 'yjyjjyu', 'vegff', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'animal', 'scsacsacas', 'animal', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'pet', 'dvtgtgtr', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'idk', 'wdwdwdwq', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'efd', 'wdwfdwefe', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'ffggf', 'fewfewfewfewf', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'htht', 'fewfewfewfewf', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'htyht', 'fewfewfewfewfew', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
+(1, 'ththth', 'efwfwqfwqfwfwq', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg');
 
 
 INSERT INTO artworks (collection_id, title, price, is_for_sale, description, image_url, medium) VALUES 
