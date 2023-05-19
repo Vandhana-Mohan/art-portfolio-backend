@@ -1,7 +1,7 @@
 const express = require("express");
 
 const art = express.Router();
-// const validateArt = require("../validations/validateGrocery.js");
+const validateArt = require("../validations/validateImages.js");
 
 const {
   getAllArt,
@@ -10,6 +10,16 @@ const {
   updateOneArt,
   deleteOneArt,
 } = require("../queries/artQuery.js");
+
+const {
+  getAllGroceries,
+  getGrocery,
+  createGrocery,
+  updateGrocery,
+  deleteGrocery,
+} = require("../queries/groceries.js");
+
+groceries.use("/:groceryId/reviews", reviewsController);
 
 // INDEX - show all images
 art.get("/images", async (req, res) => {
@@ -35,7 +45,7 @@ art.get("/images/:id", async (req, res) => {
 });
 
 // Add one image
-art.post("/images", async (req, res) => {
+art.post("/images", validateArt, async (req, res) => {
   const { error, result } = await addOneArt(req.body);
   if (error) {
     res.status(500).json({ error: "Server Error" });
@@ -45,7 +55,7 @@ art.post("/images", async (req, res) => {
 });
 
 // Update one image
-art.put("/images/:id", async (req, res) => {
+art.put("/images/:id", validateArt, async (req, res) => {
   const { id } = req.params;
 
   const { error, result } = await updateOneArt(id, req.body);
