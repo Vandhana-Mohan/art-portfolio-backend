@@ -1,6 +1,6 @@
 
 \c art_dev;
-    
+
 INSERT INTO aboutUser (first_name, last_name, about_artist, profession, location, instagram, facebook, tik_tok, youtube) VALUES 
 ('Ana', 'mdds', 'I like to draw, dance, gardening', 'artist', 'India', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
 ('sana', 'vdsfds','I like to sdfsdfsdfsdf', 'architect', 'usa', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
