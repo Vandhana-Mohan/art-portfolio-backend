@@ -1,4 +1,3 @@
-
 \c art_dev;
 
 INSERT INTO aboutUser (first_name, last_name, about_artist, profession, location, instagram, facebook, tik_tok, youtube) VALUES 
