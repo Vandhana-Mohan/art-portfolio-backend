@@ -5,7 +5,7 @@ CREATE DATABASE art_dev;
 
  \c art_dev;
 
-CREATE TABLE userData (
+CREATE TABLE aboutUser (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE userData (
 
 CREATE TABLE collections (
     id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES userData (id),
+    user_id INTEGER REFERENCES aboutUser (id),
     title VARCHAR(255),
     description TEXT,
     theme VARCHAR(255) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE collections (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE artworks (
+CREATE TABLE images (
     id SERIAL PRIMARY KEY,
     collection_id INTEGER REFERENCES collections (id),
     title VARCHAR(255) NOT NULL,

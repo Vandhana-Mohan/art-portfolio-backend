@@ -1,7 +1,7 @@
 
 \c art_dev;
     
-INSERT INTO userData (first_name, last_name, about_artist, profession, location, instagram, facebook, tik_tok, youtube) VALUES 
+INSERT INTO aboutUser (first_name, last_name, about_artist, profession, location, instagram, facebook, tik_tok, youtube) VALUES 
 ('Ana', 'mdds', 'I like to draw, dance, gardening', 'artist', 'India', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
 ('sana', 'vdsfds','I like to sdfsdfsdfsdf', 'architect', 'usa', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
 ('meena', 'csdfds','I like to csdvdsvsdvs', 'dance', 'uk', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
@@ -29,8 +29,7 @@ INSERT INTO collections (user_id, title, description, theme, collection_name, im
 (5, 'ththth', 'efwfwqfwqfwfwq', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg');
 
 
-
-INSERT INTO artworks (collection_id, title, price, is_for_sale, description, image_url, medium) VALUES 
+INSERT INTO images (collection_id, title, price, is_for_sale, description, image_url, medium) VALUES 
 (8, 'scribble', 3000.00, true, 'love this art', 'https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg', 'pencil'),
 (9, 'yellow', 3000.00, true, 'love this art', 'https://www.shutterstock.com/image-illustration/modern-illustration-linocut-style-surreal-260nw-1913052853.jpg', 'pencil'),
 (2, 'red', 3000.00, true, 'love this art', 'https://lh3.googleusercontent.com/ci/AJFM8rwqdr4P_2MEV_92ilEISXIY16I3ab9TKeyYy67BN86mP5Z5n9jWtys5zoHo5M9Xc935QBG7sQ', 'pencil'),

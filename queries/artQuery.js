@@ -2,16 +2,16 @@ const db = require("../db/dbConfig");
 
 const getAllUserData = async () => {
   try {
-    const allUsers = await db.any("SELECT * FROM userData ORDER BY id");
+    const allUsers = await db.any("SELECT * FROM aboutUser ORDER BY id");
     return allUsers;
-  } catch (error) {
+  } catch (error) { 
     throw error;
   }
 };
 
 const getAllArt = async () => {
   try {
-    const allArt = await db.any("SELECT * FROM artworks");
+    const allArt = await db.any("SELECT * FROM images");
     return allArt;
   } catch (error) {
     throw error;
@@ -30,7 +30,7 @@ const getAllCollections = async () => {
 const createUser = async (user) => {
   try {
     const newUser = await db.one(
-      "INSERT INTO userData (first_name, last_name, about_artist, profession, location, instagram, facebook, tik_tok, youtube) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *",
+      "INSERT INTO aboutUser (first_name, last_name, about_artist, profession, location, instagram, facebook, tik_tok, youtube) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *",
       [
         user.first_name,
         user.last_name,
