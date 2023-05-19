@@ -27,7 +27,6 @@ const addOneArt = async (image) => {
       "INSERT INTO images (title, price, is_for_sale, description, image_url, medium, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
       [
         image.title,
-
         image.price,
         image.is_for_sale,
         image.description,
@@ -44,98 +43,44 @@ const addOneArt = async (image) => {
   }
 };
 
-// const updateGrocery = async (id, grocery) => {
-//   try {
-//     const updateGrocery = await db.one(
-//       "UPDATE Art SET name=$1, category=$2, image_url=$3, description=$4, price=$5, quantity=$6, unit=$7, is_organic=$8  WHERE id=$9 RETURNING *",
-//       [
-//         grocery.name,
-//         grocery.category,
-//         grocery.image_url,
-//         grocery.description,
-//         grocery.price,
-//         grocery.quantity,
-//         grocery.unit,
-//         grocery.is_organic,
-//         id,
-//       ]
-//     );
-//     return { result: updateGrocery };
-//   } catch (error) {
-//     throw { error };
-//   }
-// };
+// update new image
+const updateOneArt = async (id, image) => {
+  try {
+    const updateImage = await db.one(
+      "UPDATE images SET title=$1, price=$2, is_for_sale=$3, description=$4, image_url=$5, medium=$6, created_at=$7 WHERE id=$8 RETURNING *",
+      [
+        image.title,
+        image.price,
+        image.is_for_sale,
+        image.description,
+        image.image_url,
+        image.medium,
+        image.created_at,
+        id,
+      ]
+    );
+    return { result: updateImage };
+  } catch (error) {
+    throw { error };
+  }
+};
 
-// const deleteGrocery = async (id) => {
-//   try {
-//     const deleteGrocery = await db.one(
-//       "DELETE FROM Art WHERE id=$1 RETURNING *",
-//       id
-//     );
-//     return deleteGrocery;
-//   } catch (error) {
-//     throw { error };
-//   }
-// };
+const deleteOneArt = async (id) => {
+  try {
+    const deleteImage = await db.one(
+      "DELETE FROM images WHERE id=$1 RETURNING *",
+      id
+    );
+    return deleteImage;
+  } catch (error) {
+    throw { error };
+  }
+};
 
 module.exports = {
   getAllArt,
   getOneArt,
   addOneArt,
-
-  //   updateGrocery,
-  //   deleteGrocery,
+  updateOneArt,
+  deleteOneArt,
 };
-
-/*
-
-
-
-
-
-
-
-const updateGrocery = async (id, grocery) => {
-  try {
-    const updateGrocery = await db.one(
-      "UPDATE groceries SET name=$1, category=$2, image_url=$3, description=$4, price=$5, quantity=$6, unit=$7, is_organic=$8  WHERE id=$9 RETURNING *",
-      [
-        grocery.name,
-        grocery.category,
-        grocery.image_url,
-        grocery.description,
-        grocery.price,
-        grocery.quantity,
-        grocery.unit,
-        grocery.is_organic,
-        id,
-      ]
-    );
-    return { result: updateGrocery };
-  } catch (error) {
-    throw { error };
-  }
-};
-
-const deleteGrocery = async (id) => {
-  try {
-    const deleteGrocery = await db.one(
-      "DELETE FROM groceries WHERE id=$1 RETURNING *",
-      id
-    );
-    return deleteGrocery;
-  } catch (error) {
-    throw { error };
-  }
-};
-
-module.exports = {
-  getAllGroceries,
-  getGrocery,
-  createGrocery,
-  updateGrocery,
-  deleteGrocery,
-};
-
-
-*/

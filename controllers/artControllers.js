@@ -7,9 +7,8 @@ const {
   getAllArt,
   getOneArt,
   addOneArt,
-
-  //   updateArt,
-  //   deleteArt,
+  updateOneArt,
+  deleteOneArt,
 } = require("../queries/artQuery.js");
 
 // INDEX - show all images
@@ -45,29 +44,23 @@ art.post("/images", async (req, res) => {
   }
 });
 
-module.exports = art;
-
-/*
-
-
-
-//update
-
-groceries.put("/:id", validateGrocery, async (req, res) => {
+// Update one image
+art.put("/images/:id", async (req, res) => {
   const { id } = req.params;
 
-  const { error, result } = await updateGrocery(id, req.body);
+  const { error, result } = await updateOneArt(id, req.body);
   if (error) {
     console.log(error);
-    res.status(500).json({ error: "Server error - Could not update item" });
+    res.status(500).json({ error: "Server error - Could not update" });
   } else {
     res.status(200).json(result);
   }
 });
-// DELETE
-groceries.delete("/:id", async (req, res) => {
+
+// Delete one image
+art.delete("/images/:id", async (req, res) => {
   const { id } = req.params;
-  const { error, result } = await deleteGrocery(id);
+  const { error, result } = await deleteOneArt(id);
 
   if (error) {
     res.status(404).json("Item not found");
@@ -76,7 +69,4 @@ groceries.delete("/:id", async (req, res) => {
   }
 });
 
-module.exports = groceries;
-
-
-*/
+module.exports = art;
