@@ -9,6 +9,9 @@ const {
   getAllUserData,
   getAllArt,
   getAllCollections,
+  createUser,
+  createImage,
+  createCollection,
   //   getArt,
   //   createArt,
   //   updateArt,
@@ -50,30 +53,19 @@ art.get("/collection", async (req, res) => {
   }
 });
 
-// //Show one item by id
-// groceries.get("/:id", async (req, res) => {
-//   const { id } = req.params;
-//   const { error, result } = await getGrocery(id);
-//   if (error?.code === 0) {
-//     res.status(404).json({ error: "Item Not Found" });
-//   } else if (error) {
-//     res.status(500).json({ error: "Server Error" });
-//   } else {
-//     res.status(200).json(result);
-//   }
-// });
+// CREATE User
+art.post("/user", async (req, res) => {
+  const { error, result } = await createUser(req.body);
+  if (error) {
+    res.status(500).json({ error: "Server Error" });
+  } else {
+    res.status(201).json(result);
+  }
+});
 
-// //CREATE
-// groceries.post("/", validateGrocery, async (req, res) => {
-//   const { error, result } = await createGrocery(req.body);
-//   if (error) {
-//     res.status(500).json({ error: "Server Error" });
-//   } else {
-//     res.status(201).json(result);
-//   }
-// });
+module.exports = art;
 
-// //update
+// update
 
 // groceries.put("/:id", validateGrocery, async (req, res) => {
 //   const { id } = req.params;
@@ -86,6 +78,7 @@ art.get("/collection", async (req, res) => {
 //     res.status(200).json(result);
 //   }
 // });
+
 // // DELETE
 // groceries.delete("/:id", async (req, res) => {
 //   const { id } = req.params;
@@ -98,4 +91,15 @@ art.get("/collection", async (req, res) => {
 //   }
 // });
 
-module.exports = art;
+// Show one item by id
+// groceries.get("/:id", async (req, res) => {
+//   const { id } = req.params;
+//   const { error, result } = await getGrocery(id);
+//   if (error?.code === 0) {
+//     res.status(404).json({ error: "Item Not Found" });
+//   } else if (error) {
+//     res.status(500).json({ error: "Server Error" });
+//   } else {
+//     res.status(200).json(result);
+//   }
+// });

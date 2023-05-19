@@ -27,6 +27,29 @@ const getAllCollections = async () => {
   }
 };
 
+const createUser = async (user) => {
+  try {
+    const newUser = await db.one(
+      "INSERT INTO userData (first_name, last_name, about_artist, profession, location, instagram, facebook, tik_tok, youtube) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *",
+      [
+        user.first_name,
+        user.last_name,
+        user.about_artist,
+        user.profession,
+        user.location,
+        user.instagram,
+        user.facebook,
+        user.tik_tok,
+        user.youtube,
+      ]
+    );
+
+    return { result: newUser };
+  } catch (error) {
+    throw { error };
+  }
+};
+
 // const getGrocery = async (id) => {
 //   try {
 //     const oneGrocery = await db.oneOrNone(
@@ -34,28 +57,6 @@ const getAllCollections = async () => {
 //       id
 //     );
 //     return { result: oneGrocery };
-//   } catch (error) {
-//     throw { error };
-//   }
-// };
-
-// const createGrocery = async (grocery) => {
-//   try {
-//     const newGrocery = await db.one(
-//       "INSERT INTO Art (name, category, image_url, description, price, quantity, unit, is_organic) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *",
-//       [
-//         grocery.name,
-//         grocery.category,
-//         grocery.image_url,
-//         grocery.description,
-//         grocery.price,
-//         grocery.quantity,
-//         grocery.unit,
-//         grocery.is_organic,
-//       ]
-//     );
-
-//     return { result: newGrocery };
 //   } catch (error) {
 //     throw { error };
 //   }
@@ -99,6 +100,7 @@ module.exports = {
   getAllUserData,
   getAllArt,
   getAllCollections,
+  createUser,
   //   getGrocery,
   //   createGrocery,
   //   updateGrocery,
