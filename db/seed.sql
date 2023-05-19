@@ -1,16 +1,16 @@
 
 \c art_dev;
-
-INSERT INTO userData (name, about_artist, profession, location, instagram, facebook, tik_tok) VALUES 
-('Ana', 'I like to draw, dance, gardening', 'artist', 'India', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/'),
-('sana', 'I like to sdfsdfsdfsdf', 'architect', 'usa', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/'),
-('meena', 'I like to csdvdsvsdvs', 'dance', 'uk', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/'),
-('sscs', 'I like to ssvsdsdvsd', 'sing', 'asasad', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/'),
-('scsc', 'I like to btrhtrhtrhtr', 'draw', 'dasdas', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/'),
-('cscsc', 'I like to lgekwdmlwmdwl;dqd', 'dkdsddsd', 'asdsadsa', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/'),
-('bfbfbf', 'Idklwdm;lwq,d;wd', 'sdsdsdsd', 'sdsadas', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/'),
-('weerwrw', 'knflekfeklfnlekfnmwlefmlwfmwlefwl', 'fsdfrfrefe', 'Insadsadadia', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/'),
-('mmkol', 'knflekfeklfnlekfnmwlefmlwfmwlefwl', 'efwefwefw', 'sadsaasa', 'https://www.instagram.com/vandhanamohan/', 'https://www.instagram.com/kayrod/', 'https://www.instagram.com/kayrod/');
+    
+INSERT INTO userData (first_name, last_name, about_artist, profession, location, instagram, facebook, tik_tok, youtube) VALUES 
+('Ana', 'mdds', 'I like to draw, dance, gardening', 'artist', 'India', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
+('sana', 'vdsfds','I like to sdfsdfsdfsdf', 'architect', 'usa', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
+('meena', 'csdfds','I like to csdvdsvsdvs', 'dance', 'uk', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
+('sscs', 'wdsfdfdsf','I like to ssvsdsdvsd', 'sing', 'asasad', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
+('scsc', 'evxvxc','I like to btrhtrhtrhtr', 'draw', 'dasdas', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
+('cscsc', 'wfreferg','I like to lgekwdmlwmdwl;dqd', 'dkdsddsd', 'asdsadsa', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
+('bfbfbf', 'werggerg','Idklwdm;lwq,d;wd', 'sdsdsdsd', 'sdsadas', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
+('weerwrw', 'drgrhtht','knflekfeklfnlekfnmwlefmlwfmwlefwl', 'fsdfrfrefe', 'Insadsadadia', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/'),
+('mmkol', 'hhtrhtrh','knflekfeklfnlekfnmwlefmlwfmwlefwl', 'efwefwefw', 'sadsaasa', 'https://www.instagram.com/vandhanamohan/', 'https://www.facebook.com/kayrod/', 'https://www.tiktok.com/kayrod/','https://www.youtube.com/kayrod/');
 
 INSERT INTO collections (user_id, title, description, theme, collection_name, image_url) VALUES 
 (1, 'scribble', 'rough draw', 'nature', 'nature',''),
@@ -27,6 +27,7 @@ INSERT INTO collections (user_id, title, description, theme, collection_name, im
 (3, 'htht', 'fewfewfewfewf', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
 (4, 'htyht', 'fewfewfewfewfew', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg'),
 (5, 'ththth', 'efwfwqfwqfwfwq', 'nature', 'nature','https://hips.hearstapps.com/hmg-prod/images/close-up-of-apple-against-white-background-royalty-free-image-1627315766.jpg');
+
 
 
 INSERT INTO artworks (collection_id, title, price, is_for_sale, description, image_url, medium) VALUES 

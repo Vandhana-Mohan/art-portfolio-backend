@@ -7,13 +7,15 @@ CREATE DATABASE art_dev;
 
 CREATE TABLE userData (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
     about_artist TEXT,
     profession TEXT,
     location VARCHAR(255) NOT NULL,
     instagram TEXT,
     facebook TEXT,
-    tik_tok TEXT
+    tik_tok TEXT,
+    youtube TEXT
 );
 
 CREATE TABLE collections (
