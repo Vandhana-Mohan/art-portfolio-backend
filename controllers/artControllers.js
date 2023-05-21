@@ -1,6 +1,7 @@
 const express = require("express");
 
 const art = express.Router();
+
 const validateArt = require("../validations/validateImages.js");
 
 const {
@@ -10,16 +11,6 @@ const {
   updateOneArt,
   deleteOneArt,
 } = require("../queries/artQuery.js");
-
-const {
-  getAllGroceries,
-  getGrocery,
-  createGrocery,
-  updateGrocery,
-  deleteGrocery,
-} = require("../queries/groceries.js");
-
-groceries.use("/:groceryId/reviews", reviewsController);
 
 // INDEX - show all images
 art.get("/images", async (req, res) => {

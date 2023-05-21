@@ -24,9 +24,10 @@ const getOneArt = async (id) => {
 const addOneArt = async (image) => {
   try {
     const newImage = await db.one(
-      "INSERT INTO images (title, price, is_for_sale, description, image_url, medium, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+      "INSERT INTO images (title, theme, price, is_for_sale, description, image_url, medium, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *",
       [
         image.title,
+        image.theme,
         image.price,
         image.is_for_sale,
         image.description,
@@ -47,9 +48,10 @@ const addOneArt = async (image) => {
 const updateOneArt = async (id, image) => {
   try {
     const updateImage = await db.one(
-      "UPDATE images SET title=$1, price=$2, is_for_sale=$3, description=$4, image_url=$5, medium=$6, created_at=$7 WHERE id=$8 RETURNING *",
+      "UPDATE images SET title=$1, theme=$2, price=$3, is_for_sale=$4, description=$5, image_url=$6, medium=$7, created_at=$8 WHERE id=$9 RETURNING *",
       [
         image.title,
+        image.theme,
         image.price,
         image.is_for_sale,
         image.description,

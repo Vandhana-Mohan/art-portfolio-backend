@@ -8,6 +8,7 @@ CREATE DATABASE art_dev;
 CREATE TABLE images (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
+    theme TEXT DEFAULT 'All',
     price DECIMAL(10,2) DEFAULT 0 CHECK (price >= 0),
     is_for_sale BOOLEAN DEFAULT false,
     description TEXT,
