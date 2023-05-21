@@ -48,7 +48,6 @@ art.post("/images", validateArt, async (req, res) => {
 // Update one image
 art.put("/images/:id", validateArt, async (req, res) => {
   const { id } = req.params;
-
   const { error, result } = await updateOneArt(id, req.body);
   if (error) {
     console.log(error);
