@@ -16,4 +16,3 @@ CREATE TABLE images (
     medium VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
