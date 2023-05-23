@@ -6,7 +6,7 @@ ARTS Portfolio Backend - This backend application is designed to handle requests
 
 #### [Deployed Backend URL](https://art-portfolio-0jpa.onrender.com)
 
-#### [Deployed Frontend URL](https://...)
+#### [Deployed Frontend URL](https://artistic-universe.netlify.app/))
 
 ---
 
