@@ -36,11 +36,25 @@ art.get("/images/:id", async (req, res) => {
 });
 
 // Add one image
-art.post("/images", validateArt, async (req, res) => {
+// art.post("/images", validateArt, async (req, res) => {
+//   const { error, result } = await addOneArt(req.body);
+//   if (error) {
+//     res.status(500).json({ error: "Server Error" });
+//   } else {
+//     res.status(201).json(result);
+//   }
+// });
+
+art.post("/images", upload.single('image'), validateArt, async (req, res) => {
   const { error, result } = await addOneArt(req.body);
+
   if (error) {
     res.status(500).json({ error: "Server Error" });
   } else {
+    // Access the uploaded file information using req.file
+    // Example: const imageUrl = '/uploads/' + req.file.filename;
+    // Update your database entry with the file information
+
     res.status(201).json(result);
   }
 });
